@@ -55,6 +55,7 @@
             this.lbl_estatus = new System.Windows.Forms.Label();
             this.cmb_sexo = new System.Windows.Forms.ComboBox();
             this.cmb_estatus = new System.Windows.Forms.ComboBox();
+            this.btn_salvar_foto = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pic_foto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -124,11 +125,14 @@
             // pic_foto
             // 
             this.pic_foto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_foto.Location = new System.Drawing.Point(401, 7);
+            this.pic_foto.Location = new System.Drawing.Point(417, 7);
+            this.pic_foto.MaximumSize = new System.Drawing.Size(146, 138);
             this.pic_foto.Name = "pic_foto";
             this.pic_foto.Size = new System.Drawing.Size(146, 138);
+            this.pic_foto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_foto.TabIndex = 7;
             this.pic_foto.TabStop = false;
+            this.pic_foto.DoubleClick += new System.EventHandler(this.pic_foto_DoubleClick);
             // 
             // txt_nombre
             // 
@@ -294,11 +298,22 @@
             this.cmb_estatus.Size = new System.Drawing.Size(61, 21);
             this.cmb_estatus.TabIndex = 28;
             // 
+            // btn_salvar_foto
+            // 
+            this.btn_salvar_foto.Location = new System.Drawing.Point(451, 151);
+            this.btn_salvar_foto.Name = "btn_salvar_foto";
+            this.btn_salvar_foto.Size = new System.Drawing.Size(75, 23);
+            this.btn_salvar_foto.TabIndex = 29;
+            this.btn_salvar_foto.Text = "Salvar Foto";
+            this.btn_salvar_foto.UseVisualStyleBackColor = true;
+            this.btn_salvar_foto.Click += new System.EventHandler(this.btn_salvar_foto_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(574, 433);
+            this.ClientSize = new System.Drawing.Size(606, 433);
+            this.Controls.Add(this.btn_salvar_foto);
             this.Controls.Add(this.cmb_estatus);
             this.Controls.Add(this.cmb_sexo);
             this.Controls.Add(this.lbl_estatus);
@@ -364,6 +379,7 @@
         private System.Windows.Forms.Label lbl_estatus;
         private System.Windows.Forms.ComboBox cmb_sexo;
         private System.Windows.Forms.ComboBox cmb_estatus;
+        private System.Windows.Forms.Button btn_salvar_foto;
     }
 }
 

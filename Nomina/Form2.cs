@@ -51,6 +51,8 @@ namespace Nomina
                 adapter.Fill(ds, "empleado");
 
                 dataGridView1.AutoGenerateColumns = true;
+                //dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+                //dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
                 dataGridView1.DataSource = ds;
                 dataGridView1.DataMember = "empleado";
 
@@ -141,7 +143,8 @@ namespace Nomina
 
                 Form1 F1 = new Form1();
                 F1.Show();
-                                
+
+                                                
             }
         }
 
@@ -153,9 +156,10 @@ namespace Nomina
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void btn_gen_nomina_Click(object sender, EventArgs e)
         {
-
+            Form3 F3 = new Form3();
+            F3.Show();
         }
     }
 }

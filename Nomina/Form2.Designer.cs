@@ -38,6 +38,7 @@
             this.btn_imprimir = new System.Windows.Forms.Button();
             this.btn_buscar = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btn_gen_nomina = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -49,7 +50,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(953, 359);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
             // rad_Id
@@ -146,11 +146,22 @@
             this.textBox2.Size = new System.Drawing.Size(203, 20);
             this.textBox2.TabIndex = 9;
             // 
+            // btn_gen_nomina
+            // 
+            this.btn_gen_nomina.Location = new System.Drawing.Point(820, 12);
+            this.btn_gen_nomina.Name = "btn_gen_nomina";
+            this.btn_gen_nomina.Size = new System.Drawing.Size(94, 41);
+            this.btn_gen_nomina.TabIndex = 10;
+            this.btn_gen_nomina.Text = "Generar Nomina";
+            this.btn_gen_nomina.UseVisualStyleBackColor = true;
+            this.btn_gen_nomina.Click += new System.EventHandler(this.btn_gen_nomina_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(976, 452);
+            this.Controls.Add(this.btn_gen_nomina);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.btn_nuevo);
             this.Controls.Add(this.btn_imprimir);
@@ -182,5 +193,6 @@
         private System.Windows.Forms.Button btn_imprimir;
         private System.Windows.Forms.Button btn_nuevo;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btn_gen_nomina;
     }
 }
