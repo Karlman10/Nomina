@@ -1,6 +1,6 @@
 ﻿namespace Nomina
 {
-    partial class Form1
+    partial class CRUD_Empleado
     {
         /// <summary>
         /// Required designer variable.
@@ -35,7 +35,6 @@
             this.lbl_apellido = new System.Windows.Forms.Label();
             this.lbl_sexo = new System.Windows.Forms.Label();
             this.lbl_fecha_nac = new System.Windows.Forms.Label();
-            this.pic_foto = new System.Windows.Forms.PictureBox();
             this.txt_nombre = new System.Windows.Forms.TextBox();
             this.txt_apellido = new System.Windows.Forms.TextBox();
             this.txt_fecha_nac = new System.Windows.Forms.TextBox();
@@ -56,6 +55,8 @@
             this.cmb_sexo = new System.Windows.Forms.ComboBox();
             this.cmb_estatus = new System.Windows.Forms.ComboBox();
             this.btn_salvar_foto = new System.Windows.Forms.Button();
+            this.btn_eliminar_usuario = new System.Windows.Forms.Button();
+            this.pic_foto = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pic_foto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -121,18 +122,6 @@
             this.lbl_fecha_nac.Size = new System.Drawing.Size(111, 13);
             this.lbl_fecha_nac.TabIndex = 6;
             this.lbl_fecha_nac.Text = "Fecha de Nacimiento ";
-            // 
-            // pic_foto
-            // 
-            this.pic_foto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pic_foto.Location = new System.Drawing.Point(417, 7);
-            this.pic_foto.MaximumSize = new System.Drawing.Size(146, 138);
-            this.pic_foto.Name = "pic_foto";
-            this.pic_foto.Size = new System.Drawing.Size(146, 138);
-            this.pic_foto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_foto.TabIndex = 7;
-            this.pic_foto.TabStop = false;
-            this.pic_foto.DoubleClick += new System.EventHandler(this.pic_foto_DoubleClick);
             // 
             // txt_nombre
             // 
@@ -225,17 +214,17 @@
             // 
             // btn_borrar
             // 
-            this.btn_borrar.Location = new System.Drawing.Point(191, 383);
+            this.btn_borrar.Location = new System.Drawing.Point(272, 383);
             this.btn_borrar.Name = "btn_borrar";
-            this.btn_borrar.Size = new System.Drawing.Size(75, 23);
+            this.btn_borrar.Size = new System.Drawing.Size(90, 23);
             this.btn_borrar.TabIndex = 20;
-            this.btn_borrar.Text = "Borrar";
+            this.btn_borrar.Text = "Limpiar Campos";
             this.btn_borrar.UseVisualStyleBackColor = true;
             this.btn_borrar.Click += new System.EventHandler(this.btn_borrar_Click);
             // 
             // btn_imp
             // 
-            this.btn_imp.Location = new System.Drawing.Point(272, 383);
+            this.btn_imp.Location = new System.Drawing.Point(368, 383);
             this.btn_imp.Name = "btn_imp";
             this.btn_imp.Size = new System.Drawing.Size(75, 23);
             this.btn_imp.TabIndex = 21;
@@ -245,7 +234,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(381, 383);
+            this.label1.Location = new System.Drawing.Point(381, 352);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 13);
             this.label1.TabIndex = 22;
@@ -280,8 +269,8 @@
             // 
             this.cmb_sexo.FormattingEnabled = true;
             this.cmb_sexo.Items.AddRange(new object[] {
-            "Femenino",
-            "Masculino"});
+            "F",
+            "M"});
             this.cmb_sexo.Location = new System.Drawing.Point(148, 96);
             this.cmb_sexo.Name = "cmb_sexo";
             this.cmb_sexo.Size = new System.Drawing.Size(121, 21);
@@ -308,11 +297,34 @@
             this.btn_salvar_foto.UseVisualStyleBackColor = true;
             this.btn_salvar_foto.Click += new System.EventHandler(this.btn_salvar_foto_Click);
             // 
-            // Form1
+            // btn_eliminar_usuario
+            // 
+            this.btn_eliminar_usuario.Location = new System.Drawing.Point(191, 383);
+            this.btn_eliminar_usuario.Name = "btn_eliminar_usuario";
+            this.btn_eliminar_usuario.Size = new System.Drawing.Size(75, 23);
+            this.btn_eliminar_usuario.TabIndex = 32;
+            this.btn_eliminar_usuario.Text = "Eliminar";
+            this.btn_eliminar_usuario.UseVisualStyleBackColor = true;
+            this.btn_eliminar_usuario.Click += new System.EventHandler(this.btn_eliminar_usuario_Click);
+            // 
+            // pic_foto
+            // 
+            this.pic_foto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pic_foto.Location = new System.Drawing.Point(417, 7);
+            this.pic_foto.MaximumSize = new System.Drawing.Size(146, 138);
+            this.pic_foto.Name = "pic_foto";
+            this.pic_foto.Size = new System.Drawing.Size(146, 138);
+            this.pic_foto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_foto.TabIndex = 7;
+            this.pic_foto.TabStop = false;
+            this.pic_foto.DoubleClick += new System.EventHandler(this.pic_foto_DoubleClick);
+            // 
+            // CRUD_Empleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(606, 433);
+            this.Controls.Add(this.btn_eliminar_usuario);
             this.Controls.Add(this.btn_salvar_foto);
             this.Controls.Add(this.cmb_estatus);
             this.Controls.Add(this.cmb_sexo);
@@ -341,8 +353,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_calc_edad);
             this.Controls.Add(this.lbl_sala);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "CRUD_Empleado";
+            this.Text = "CRUD_Empleado";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic_foto)).EndInit();
             this.ResumeLayout(false);
@@ -380,6 +392,7 @@
         private System.Windows.Forms.ComboBox cmb_sexo;
         private System.Windows.Forms.ComboBox cmb_estatus;
         private System.Windows.Forms.Button btn_salvar_foto;
+        private System.Windows.Forms.Button btn_eliminar_usuario;
     }
 }
 

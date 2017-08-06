@@ -1,6 +1,6 @@
 ﻿namespace Nomina
 {
-    partial class Form2
+    partial class Busqueda
     {
         /// <summary>
         /// Required designer variable.
@@ -37,13 +37,14 @@
             this.btn_nuevo = new System.Windows.Forms.Button();
             this.btn_imprimir = new System.Windows.Forms.Button();
             this.btn_buscar = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.btn_gen_nomina = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 81);
             this.dataGridView1.MultiSelect = false;
@@ -139,30 +140,11 @@
             this.btn_buscar.UseVisualStyleBackColor = true;
             this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(375, 48);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(203, 20);
-            this.textBox2.TabIndex = 9;
-            // 
-            // btn_gen_nomina
-            // 
-            this.btn_gen_nomina.Location = new System.Drawing.Point(820, 12);
-            this.btn_gen_nomina.Name = "btn_gen_nomina";
-            this.btn_gen_nomina.Size = new System.Drawing.Size(94, 41);
-            this.btn_gen_nomina.TabIndex = 10;
-            this.btn_gen_nomina.Text = "Generar Nomina";
-            this.btn_gen_nomina.UseVisualStyleBackColor = true;
-            this.btn_gen_nomina.Click += new System.EventHandler(this.btn_gen_nomina_Click);
-            // 
-            // Form2
+            // Busqueda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(976, 452);
-            this.Controls.Add(this.btn_gen_nomina);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.btn_nuevo);
             this.Controls.Add(this.btn_imprimir);
             this.Controls.Add(this.btn_buscar);
@@ -172,8 +154,8 @@
             this.Controls.Add(this.rad_Nom);
             this.Controls.Add(this.rad_Id);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "Form2";
-            this.Text = "Form2";
+            this.Name = "Busqueda";
+            this.Text = "Busqueda";
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -192,7 +174,5 @@
         private System.Windows.Forms.Button btn_buscar;
         private System.Windows.Forms.Button btn_imprimir;
         private System.Windows.Forms.Button btn_nuevo;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button btn_gen_nomina;
     }
 }
